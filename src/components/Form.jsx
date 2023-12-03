@@ -3,6 +3,14 @@ import * as htmlToImage from "html-to-image";
 
 let node = document.getElementById("poster");
 
+function generatePoster() {
+  htmlToImage.toPng(node).then(function (dataUrl) {
+    let img = new Image();
+    img.src = dataUrl;
+    document.body.appendChild(img);
+  });
+}
+
 function Form() {
   return (
     <div className="flex flex-col bg-[#add8e6] m-4 p-4 rounded-lg border-black border-solid border-2 shadow-[5px_5px_0_0_rgba(0,0,0,1)]">
@@ -13,16 +21,7 @@ function Form() {
       <input type="text" className="input" placeholder="Poster year" />
       <input type="text" className="input" placeholder="Poster Image" />
       <div className="my-2 flex gap-2">
-        <button
-          className="input"
-          onClick={() =>
-            htmlToImage.toPng(node).then(function (dataUrl) {
-              let img = new Image();
-              img.src = dataUrl;
-              document.body.appendChild(img);
-            })
-          }
-        >
+        <button className="input" onClick={generatePoster}>
           Generar Poster
         </button>
         <button className="input">Descargar Poster</button>

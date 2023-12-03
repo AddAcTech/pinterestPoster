@@ -4,7 +4,7 @@ import Form from "./components/Form";
 
 function App() {
   return (
-    <div className="flex flex-col md:flex-row h-screen items-center justify-center">
+    <div className="flex flex-col md:flex-row  md:h-screen items-center justify-center">
       <Poster />
       <Form />
     </div>

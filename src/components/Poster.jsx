@@ -19,10 +19,14 @@ function Poster() {
 
   return (
     <div>
-      <div ref={node} className="bg-[#dcd9d2] p-[25px] w-[450px]" id="poster">
-        <div className="w-[400px] h-[400px] bg-[#ffe4c4] flex justify-center items-center mx-auto overflow-hidden object-contain mb-3">
+      <div
+        ref={node}
+        className="bg-[#dcd9d2] p-[25px] max-w-md my-2 md:my-0"
+        id="poster"
+      >
+        <div className="w-full bg-[#ffe4c4] flex justify-center items-center mx-auto overflow-hidden object-contain mb-3">
           <img
-            className="object-cover overflow-hidden"
+            className="object-cover overflow-hidden h-[300px] w-[300px]"
             id="poster-image"
             src={bat}
             alt="Poster Image"

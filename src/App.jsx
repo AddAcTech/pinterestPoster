@@ -4,13 +4,13 @@ import Form from "./components/Form";
 
 function App() {
   const [poster, setPoster] = useState({
-    title: "",
-    author: "",
-    year: "",
+    title: "TITLE",
+    author: "DIRECTOR",
+    year: "YEAR",
     image: "",
-    starring: "",
-    running: "",
-    productor: "",
+    starring: "ACTOR",
+    running: "123",
+    productor: "ALEXIS AGUILAR",
   });
   return (
     <div className="flex flex-col md:flex-row  md:h-screen items-center justify-center">

@@ -46,7 +46,9 @@ function Poster({ poster }) {
         </div>
         <div className="font-normal">
           <span>produced by</span>
-          <span className="ml-2">{poster.producer.toUpperCase()}</span>
+          <span className="ml-2">
+            {poster.producer ? poster.producer.toUpperCase() : "PRODUCER"}
+          </span>
         </div>
         <div className="mt-2 font-normal ">
           <span>starring</span>

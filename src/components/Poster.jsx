@@ -4,6 +4,18 @@ import * as htmlToImage from "html-to-image";
 
 function Poster() {
   const node = useRef(null);
+  function generatePoster() {
+    if (node.current) {
+      htmlToImage
+        .toJpeg(node.current, { quality: 0.95 })
+        .then(function (dataUrl) {
+          let link = document.createElement("a");
+          link.download = "myPoster.jpeg";
+          link.href = dataUrl;
+          link.click();
+        });
+    }
+  }
 
   return (
     <div>
@@ -33,20 +45,8 @@ function Poster() {
           </span>
         </div>
       </div>
-      <button
-        className="input"
-        onClick={() =>
-          htmlToImage
-            .toJpeg(node.current, { quality: 0.95 })
-            .then(function (dataUrl) {
-              let link = document.createElement("a");
-              link.download = "myPoster.jpeg";
-              link.href = dataUrl;
-              link.click();
-            })
-        }
-      >
-        Generar -{">"}
+      <button className="input w-full" onClick={generatePoster}>
+        Download
       </button>
     </div>
   );

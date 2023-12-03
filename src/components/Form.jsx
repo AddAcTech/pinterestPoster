@@ -29,7 +29,7 @@ function Form({ setPoster }) {
       <input
         type="text"
         className="input"
-        placeholder="Poster Image"
+        placeholder="Image URL"
         value={image}
         onChange={(e) => setImage(e.target.value)}
       />

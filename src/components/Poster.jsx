@@ -32,7 +32,7 @@ function Poster({ poster }) {
           />
         </div>
         <div>
-          <span className="font-bold text-[#2b2b28] text-4xl">
+          <span className="font-bold text-[#2b2b28] text-4xl tracking-tighter">
             {poster.title.toUpperCase()}
           </span>
           <span className="font-medium ml-2">{poster.year}</span>

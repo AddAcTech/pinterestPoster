@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import * as htmlToImage from "html-to-image";
 
 function Poster({ poster }) {
   const node = useRef(null);
@@ -25,13 +26,13 @@ function Poster({ poster }) {
       >
         <div className="w-full bg-[#ffe4c4] flex justify-center items-center mx-auto overflow-hidden object-contain mb-3">
           <img
-            className="object-cover overflow-hidden h-[300px] w-[300px]"
+            className="object-cover overflow-hidden h-[300px] "
             id="poster-image"
             src={poster.image}
             alt="Poster Image"
           />
         </div>
-        <div>
+        <div className="overflow-hidden">
           <span className="font-bold text-[#2b2b28] text-4xl tracking-tighter">
             {poster.title.toUpperCase()}
           </span>

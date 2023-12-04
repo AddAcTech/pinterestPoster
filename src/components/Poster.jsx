@@ -24,12 +24,12 @@ function Poster({ poster }) {
         className="bg-[#dcd9d2] p-[25px] max-w-md my-2 md:my-0"
         id="poster"
       >
-        <div className="w-full bg-[#ffe4c4] flex justify-center items-center mx-auto overflow-hidden object-contain mb-3">
+        <div className="bg-[#ffe4c4] flex justify-center items-center mx-auto overflow-hidden object-contain mb-3">
           <img
-            className="object-cover overflow-hidden h-[300px] "
+            className="object-cover overflow-hidden h-[300px] min-w-[300px] "
             id="poster-image"
             src={poster.image}
-            alt="Poster Image"
+            alt="Your image"
           />
         </div>
         <div className="overflow-hidden">

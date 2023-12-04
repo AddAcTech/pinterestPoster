@@ -28,7 +28,7 @@ function Form({ setPoster }) {
   };
 
   return (
-    <div className="flex flex-col bg-[#add8e6] m-4 p-4 rounded-lg border-black border-solid border-2 shadow-[5px_5px_0_0_rgba(0,0,0,1)]">
+    <div className="max-w-xs flex flex-col bg-[#add8e6] m-4 p-4 rounded-lg border-black border-solid border-2 shadow-[5px_5px_0_0_rgba(0,0,0,1)]">
       <p className="text-2xl font-bold text-[#323232]">Welcome,</p>
       <p className="text-[#636363] font-semibold">create your poster.</p>
       <div className="flex flex-col gap-3">
@@ -45,7 +45,7 @@ function Form({ setPoster }) {
           </label>
           <input
             type="file"
-            className="input"
+            className="input text-xs"
             accept="image/*"
             onChange={handleImageChange}
           />
